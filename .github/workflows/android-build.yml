@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.11.0"
+          node-version: "22.19.0"
           cache: npm
 
       - name: Set up Java
@@ -33,7 +33,7 @@ jobs:
           cache: gradle
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Create local configuration
         run: cp local.config.example.ts local.config.ts
